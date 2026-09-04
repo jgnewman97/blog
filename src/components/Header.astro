@@ -1,9 +1,9 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, withBase } from '../consts';
 import HeaderLink from './HeaderLink.astro';
-const homePath = import.meta.env.BASE_URL;
-const blogPath = homePath + "blog";
-const aboutPath = homePath + "about";
+const homePath = withBase();
+const blogPath = withBase('blog/');
+const aboutPath = withBase('about/');
 ---
 
 <header>
